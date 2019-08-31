@@ -7,8 +7,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ScrollView
 import android.widget.Toolbar
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.marginTop
+import androidx.core.widget.NestedScrollView
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -27,10 +31,9 @@ private const val ARG_PARAM2 = "param2"
 class Profile : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val ac = activity as AppCompatActivity
-        ac.setSupportActionBar(profile_toolbar)
 
+        super.onCreate(savedInstanceState)
+        val toolbar = activity?.findViewById<Toolbar>(R.id.profile_toolbar)
     }
 
     override fun onCreateView(
